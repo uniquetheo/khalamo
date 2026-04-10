@@ -10,15 +10,6 @@ export function Hero() {
         className="absolute inset-0 bg-cover bg-center md:bg-top opacity-50 md:opacity-60 transition-transform duration-1000 group-hover:scale-105"
         style={{ backgroundImage: `url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop')` }}
       />
-      {/* Dynamic Gradients */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(to right, rgb(var(--background)) 10%, transparent 80%), linear-gradient(to top, rgb(var(--background)) 0%, transparent 40%)`,
-        }}
-        className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"
-      />
-      
       {/* Using the CSS variables directly in tailwind to simulate the exact gradient from the mock */}
       <div 
         className="absolute inset-0 pointer-events-none"
