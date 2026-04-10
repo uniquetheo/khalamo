@@ -1,38 +1,16 @@
 import React from "react";
+import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
-import { Container } from "@/components/shared/container";
-import { Section } from "@/components/shared/section";
-import { MusicCard } from "@/components/shared/music-card";
-import { Heading, Subheading } from "@/components/ui/typography";
+import { Music } from "@/components/sections/music";
+import { Footer } from "@/components/sections/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-black relative">
+      <Navbar />
       <Hero />
-
-      <Section>
-        <Container>
-          <div className="text-center mb-16">
-            <Heading className="text-3xl md:text-5xl">Latest Releases</Heading>
-            <Subheading>The evolution of global sound.</Subheading>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <MusicCard 
-              title="Midnight Sun (Single)" 
-              cover="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop" 
-            />
-            <MusicCard 
-              title="Lost in Lagos" 
-              cover="https://images.unsplash.com/photo-1540039155733-d7696d4eb98c?q=80&w=1974&auto=format&fit=crop" 
-            />
-            <MusicCard 
-              title="The Arrival (Album)" 
-              cover="https://images.unsplash.com/photo-1501281668745-f7f5792203bba?q=80&w=2070&auto=format&fit=crop" 
-            />
-          </div>
-        </Container>
-      </Section>
+      <Music />
+      <Footer />
     </main>
   );
 }
